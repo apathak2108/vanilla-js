@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Vaidation using Vanilla JS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form id="user-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <span class="error" id="name-error"></span>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <span class="error" id="email-error"></span>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required />
+        <span class="error" id="phone-error"></span>
+
+        <fieldset>
+          <legend>Select your gender:</legend>
+
+          <input type="radio" id="male" name="gender" value="male" required />
+          <label for="male">Male</label>
+
+          <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="female"
+            required
+          />
+          <label for="female">Female</label>
+        </fieldset>
+
+        <label for="dropdown">Sample dropdown:</label>
+        <select id="dropdown" name="dropdown" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+        <span class="error" id="dropdown-error"></span>
+
+        <button type="submit">SUBMIT</button>
+      </form>
+      <div id="form-data"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
